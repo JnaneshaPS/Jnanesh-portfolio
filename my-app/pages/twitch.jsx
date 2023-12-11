@@ -17,8 +17,8 @@ const twitch = () => {
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Twitch UI</h2>
-          <h3>Next JS / Tailwind / Next Auth</h3>
+          <h2 className='py-2'>Travel-advisor</h2>
+          <h3>React JS / Tailwind / github</h3>
         </div>
       </div>
 
@@ -27,23 +27,14 @@ const twitch = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This appplication was built using NEXT.JS and is styled with
-            Tailwind CSS. The application is hosted statically using Vercel.
-            This is a mobile responsive recreation of Twitch.tv and features
-            Next/Auth.js for authentication. Users may choose to be
-            authenticated with either a Github account or a Google account. A
-            few features to note with this project are lazy loading images using
-            the Image component, built in routing, and Next/Auth Context.
+            This app is built using React JS and it is an extriemly useful tool for
+            trvellers to suggesst the best places to visit. This app will Help 
+            tourist to go to the best places,and good resturants and hotels.
+            This is the app aere we get the resturants and hptels based on the 
+            rating of the people
           </p>
           <a
-            href='https://twitch-nextjs-tailwind.vercel.app/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-          </a>
-          <a
-            href='https://github.com/fireclint/twitch-nextjs-tailwind'
+            href='https://github.com/JnaneshaPS/Travel-As-God'
             target='_blank'
             rel='noreferrer'
           >
@@ -56,7 +47,7 @@ const twitch = () => {
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Next.JS
+                <RiRadioButtonFill className='pr-1' /> React.JS
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Tailwind
@@ -65,13 +56,10 @@ const twitch = () => {
                 <RiRadioButtonFill className='pr-1' /> Javascript
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Next Auth
+                <RiRadioButtonFill className='pr-1' /> HTML
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Github Auth
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google Auth
+                <RiRadioButtonFill className='pr-1' /> Google map API
               </p>
             </div>
           </div>

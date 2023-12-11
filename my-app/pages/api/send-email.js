@@ -11,14 +11,14 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'jnaneshps5@gmail.com',
-      pass: '9019008540@Jn',
+      user: 'jnaneshps5@gmail.com', // Update with your Gmail email
+      pass: '9019008540@Jn',    // Update with your Gmail app password
     },
   });
 
   const mailOptions = {
-    from: 'jnaneshps5@gmail.com',
-    to: 'jnaneshps4@gmail.com',
+    from: 'jnaneshps5@gmail.com',    // Update with your Gmail email
+    to: 'jnaneshps4@gmail.com', // Update with the recipient's email
     subject: `New Message from ${name} - ${subject}`,
     text: `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`,
   };
@@ -29,6 +29,6 @@ export default async function handler(req, res) {
     res.status(200).json({ success: true, message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ success: false, error: 'Internal Server Error' });
+    res.status(500).json({ success: false, error: 'Internal Server Error', details: error.message });
   }
 }

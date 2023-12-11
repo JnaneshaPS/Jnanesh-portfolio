@@ -8,51 +8,8 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg';
 
+
 const Contact = () => {
-
-  const [message, setMessage] = useState('');
-
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSendMessage = async () => {
-    if (!message.trim()) {
-      return;
-    }
-
-    const formData = {
-      name: 'John Doe',
-      phone: '9019008540',
-      email: 'jnaneshps4@gmail.com',
-      subject: 'Contact Form Submission',
-      message: message,
-    };
-
-    try {
-      const response = await fetch('pages/api/send-email.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        console.log('Message sent successfully');
-        // Add any additional logic or user feedback here
-      } else {
-        console.error('Failed to send message');
-        // Handle error or provide user feedback
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      // Handle network errors or other issues
-    }
-
-    setMessage('');
-  };
-
 
   return (
     <div id='contact' className='w-full lg:h-screen'>
@@ -125,6 +82,7 @@ const Contact = () => {
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
            
+                <form >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>Name</label>
@@ -164,16 +122,16 @@ const Contact = () => {
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
                   <textarea
-        value={message}
-        onChange={handleMessageChange}
+        name='message'
         placeholder="Type your message here..."
         className='w-full p-4'
       />
       </div>
-      <button className='w-full p-4 text-gray-100 mt-4' onClick={handleSendMessage}>
+      <button className='w-full p-4 text-white bg-green-500 hover:bg-green-700 rounded-md'
+ type='submit'>
         Send Message
       </button>
-
+          </form>
               
             </div>
           </div>
