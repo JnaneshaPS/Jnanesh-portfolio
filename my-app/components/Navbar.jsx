@@ -121,8 +121,8 @@ const Navbar = () => {
                 <a>
                 <Image
   src={NavLogo}
-  width='87'
-  height='35'
+  width='75'
+  height='25'
   alt='/'
   style={{ backgroundColor: '#ecf0f3' }}
 />
