@@ -71,7 +71,7 @@ const Navbar = () => {
         <div>
           <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
             <li className='ml-10 text-sm uppercase hover:border-b'>
-              <Link href='/'>Home</Link>
+              <Link href='/college'>college</Link>
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <Link href='/#about'>About</Link>
@@ -144,9 +144,9 @@ const Navbar = () => {
           </div>
           <div className='py-4 flex flex-col'>
             <ul className='uppercase'>
-              <Link href='/'>
+            <Link href='/college'>
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                  Home
+                  College
                 </li>
               </Link>
               <Link href='/#about'>
@@ -174,6 +174,7 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link>
+              
             </ul>
             <div className='pt-40'>
               <p className='uppercase tracking-widest text-[#5651e5]'>
