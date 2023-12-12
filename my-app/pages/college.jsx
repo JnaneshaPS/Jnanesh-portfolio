@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 const college = () => {
   const [projects, setProjects] = useState([]);
@@ -34,6 +35,15 @@ const college = () => {
   }, []);
 
   return (
+    <>
+     <Head>
+        <title>College | Works</title>
+        <meta
+          name='description'
+          content='I’m a front-end web developer specializing in building (and occasionally designing) exceptional digital experiences.'
+        />
+        <link rel='icon' href='/fav.png' />
+      </Head>
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', paddingTop: '200px' }}>
       <h1 style={{ color: '#333' }}>College Management System</h1>
 
@@ -89,6 +99,7 @@ const college = () => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 
