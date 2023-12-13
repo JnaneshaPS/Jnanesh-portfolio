@@ -57,7 +57,6 @@ const college = () => {
           />
           <button
             type="button"
-            onClick={addProject}
             style={{
               padding: '10px',
               backgroundColor: '#007bff',
