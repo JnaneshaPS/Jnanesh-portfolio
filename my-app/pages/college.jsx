@@ -6,34 +6,7 @@ const college = () => {
   const [projectName, setProjectName] = useState('');
   const [projectLink, setProjectLink] = useState('');
 
-  const addProject = async () => {
-    const response = await fetch('/api/projects', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name: projectName, link: projectLink }),
-    });
-
-    if (response.ok) {
-      setProjects([...projects, { name: projectName, link: projectLink }]);
-      setProjectName('');
-      setProjectLink('');
-    }
-  };
-
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const response = await fetch('pages/api/projects');
-      if (response.ok) {
-        const data = await response.json();
-        setProjects(data);
-      }
-    };
-
-    fetchProjects();
-  }, []);
-
+ 
   return (
     <>
      <Head>
