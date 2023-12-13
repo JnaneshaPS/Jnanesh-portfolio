@@ -63,7 +63,7 @@ const Navbar = () => {
               width='125'
               height='100'
               className='cursor-pointer'
-              style={{backgroundColor:`${navBg}`}}
+              style={{backgroundColor:`${navBg}`}} vf r
               
             />
           
